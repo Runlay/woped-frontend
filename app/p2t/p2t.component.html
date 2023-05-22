@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <div>
+        <mat-stepper orientation="vertical" #stepper>
+            <mat-step>
+                <form>
+                    <ng-template matStepLabel>Explenation</ng-template>
+                    <p> <b>What is P2T?</b> <br>
+                        The process-to-text approach in the context of Business Process Management
+                        (BPM) and Natural Language Processing (NLP) refers to the automatic generation of text
+                        descriptions
+                        or documentations of business processes. Using BPM techniques and NLP algorithms, process models
+                        can
+                        be analyzed and translated into natural language. This allows the creation of detailed
+                        descriptions
+                        of processes that can be used for various purposes, such as training documentation, user
+                        documentation, or compliance reports.</p>
+                </form>
+            </mat-step>
+
+
+            <mat-step>
+                <form>
+                    <ng-template matStepLabel>Model</ng-template>
+                    <p>To upload your process model you can either select your file via the Select button in your
+                        explorer
+                        or drag and drop it into the right pane.<br></p>
+                    <form method="POST Process Modell" enctype="multipart/form-data">
+                        <div class="mehrspaltig">
+                            <div class="Upload from explorer" style="margin-top: 2em">
+                                <p>
+                                    <input name="datei" type="file" size="50" accept="text/*">
+                                    <br>(*.txt, *.html)
+                                </p>
+                            </div>
+                            <div class="dropzone">Leider habe ich noch keine Ahnung wie das mit dem Drag&Drop geht...
+                            </div>
+                        </div>
+                    </form>
+                </form>
+                <button mat-button matStepperNext>Generate</button>
+            </mat-step>
+
+            <mat-step>
+                <ng-template matStepLabel>Text (Done)</ng-template>
+                <div>
+                    <p>Hier steht dann unsere Ausgabe</p>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button (click)="stepper.reset()">Reset</button>
+                    <button mat-button>Download Text as .txt</button>
+                </div>
+            </mat-step>
+        </mat-stepper>
+    </div>
+</body>
+
+</html>
