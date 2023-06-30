@@ -1,39 +1,35 @@
-<link rel="stylesheet" href="home.component.css">
+<link rel="stylesheet" href="home.component.css" />
 
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
-    <img width="40" alt="WoPeD Logo" src="../assets/woped.jpeg" />
-    <h1>WoPeD</h1>
-    <div class="spacer"></div>
-    <!-- <a aria-label="Angular on twitter" target="_blank" rel="noopener" href="https://twitter.com/angular" title="Twitter"> -->
-    <!-- <svg id="twitter-logo" height="24" data-name="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <img width="40" alt="WoPeD Logo" src="../assets/woped.jpeg" />
+  <h1>WoPeD</h1>
+  <div class="spacer"></div>
+  <!-- <a aria-label="Angular on twitter" target="_blank" rel="noopener" href="https://twitter.com/angular" title="Twitter"> -->
+  <!-- <svg id="twitter-logo" height="24" data-name="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
       <rect width="400" height="400" fill="none" />
       <path
         d="M153.62,301.59c94.34,0,145.94-78.16,145.94-145.94,0-2.22,0-4.43-.15-6.63A104.36,104.36,0,0,0,325,122.47a102.38,102.38,0,0,1-29.46,8.07,51.47,51.47,0,0,0,22.55-28.37,102.79,102.79,0,0,1-32.57,12.45,51.34,51.34,0,0,0-87.41,46.78A145.62,145.62,0,0,1,92.4,107.81a51.33,51.33,0,0,0,15.88,68.47A50.91,50.91,0,0,1,85,169.86c0,.21,0,.43,0,.65a51.31,51.31,0,0,0,41.15,50.28,51.21,51.21,0,0,1-23.16.88,51.35,51.35,0,0,0,47.92,35.62,102.92,102.92,0,0,1-63.7,22A104.41,104.41,0,0,1,75,278.55a145.21,145.21,0,0,0,78.62,23"
         fill="#fff" />
     </svg>
   </a>-->
-
 </div>
 
 <div class="content" role="main">
+  <!-- Tabs to Switch between T2P and P2T -->
+  <mat-tab-group id="tab-group">
+    <mat-tab label="T2P (Text-to-Process)" class="tabGroup">
+      <app-t2p></app-t2p>
+    </mat-tab>
+    <mat-tab label="P2T (Process-to-Text)" class="tabGroup">
+      <app-p2t></app-p2t>
+    </mat-tab>
+  </mat-tab-group>
 
-
-    <!-- Tabs to Switch between T2P and P2T -->
-    <mat-tab-group id="tab-group">
-        <mat-tab label="T2P (Text-to-Process)" class="tabGroup">
-            <app-t2p></app-t2p>
-        </mat-tab>
-        <mat-tab label="P2T (Process-to-Text)" class="tabGroup">
-            <app-p2t></app-p2t>
-        </mat-tab>
-    </mat-tab-group>
-
-
-    <!-- <h2>Next Steps</h2>
+  <!-- <h2>Next Steps</h2>
     <p>What do you want to do next with your app?</p> -->
 
-    <!-- <input type="hidden" #selection>
+  <!-- <input type="hidden" #selection>
 
     <div class="card-container">
         <div class="card card-small" (click)="selection.value = 'component'" tabindex="0">
@@ -84,12 +80,10 @@
             <span>Build for Production</span>
         </div> -->
 
+  <!-- <app-t2p></app-t2p> -->
+  <!-- <app-p2t></app-p2t> -->
 
-
-    <!-- <app-t2p></app-t2p> -->
-    <!-- <app-p2t></app-p2t> -->
-
-    <!-- <div class="card highlight-card card-small">
+  <!-- <div class="card highlight-card card-small">
 
         <svg id="rocket" alt="Rocket Ship" xmlns="http://www.w3.org/2000/svg" width="101.678" height="101.678"
             viewBox="0 0 101.678 101.678">
@@ -118,8 +112,8 @@
 
     </div> -->
 
-    <!-- Tabs to Switch between T2P and P2T -->
-    <!-- <mat-tab-group>
+  <!-- Tabs to Switch between T2P and P2T -->
+  <!-- <mat-tab-group>
         <mat-tab label="T2P (Text-to-Process)" class="tabGroup">
             <ng-template matTabContent>
 
@@ -347,12 +341,9 @@
         </mat-tab>
     </mat-tab-group> -->
 
-
-
-
-    <!-- Links -->
-    <div class="card-container">
-        <a class="circle-link" title="Animations" href="https://angular.io/guide/animations" target="_blank"
+  <!-- Links -->
+  <div class="card-container">
+    <!-- <a class="circle-link" title="Animations" href="https://angular.io/guide/animations" target="_blank"
             rel="noopener">
             <svg id="Group_20" data-name="Group 20" xmlns="http://www.w3.org/2000/svg" width="21.813" height="23.453"
                 viewBox="0 0 21.813 23.453">
@@ -368,30 +359,119 @@
                 <path id="Path_19" data-name="Path 19" d="M4137.529,1027.283l-7.7-3.723,4.417-2.721,7.753,3.723Z"
                     transform="translate(-4125.003 -1015.199)" fill="#fff" />
             </svg>
-        </a>
+        </a> -->
 
-        <a class="circle-link" title="CLI" href="https://cli.angular.io/" target="_blank" rel="noopener">
-            <svg alt="Angular CLI Logo" xmlns="http://www.w3.org/2000/svg" width="21.762" height="23.447"
-                viewBox="0 0 21.762 23.447">
-                <g id="Group_21" data-name="Group 21" transform="translate(0)">
-                    <path id="Path_20" data-name="Path 20"
-                        d="M2660.313,313.618h0l-10.833,3.9,1.637,14.4,9.2,5.152,9.244-5.152,1.685-14.4Z"
-                        transform="translate(-2649.48 -313.618)" fill="#37474f" />
-                    <path id="Path_21" data-name="Path 21" d="M2741.883,313.618v23.447l9.244-5.152,1.685-14.4Z"
-                        transform="translate(-2731.05 -313.618)" fill="#263238" />
-                    <path id="Path_22" data-name="Path 22"
-                        d="M2692.293,379.169h11.724V368.618h-11.724Zm11.159-.6h-10.608v-9.345h10.621v9.345Z"
-                        transform="translate(-2687.274 -362.17)" fill="#fff" />
-                    <path id="Path_23" data-name="Path 23"
-                        d="M2709.331,393.688l.4.416,2.265-2.28-2.294-2.294-.4.4,1.893,1.893Z"
-                        transform="translate(-2702.289 -380.631)" fill="#fff" />
-                    <rect id="Rectangle_12" data-name="Rectangle 12" width="3.517" height="0.469"
-                        transform="translate(9.709 13.744)" fill="#fff" />
-                </g>
-            </svg>
-        </a>
+    <a
+      class="circle-link"
+      title="Repository"
+      href="https://github.com/woped/WoPeD"
+      target="_blank"
+      rel="noopener"
+    >
+      <svg
+        alt="Angular CLI Logo"
+        xmlns="http://www.w3.org/2000/svg"
+        width="21.762"
+        height="23.447"
+        viewBox="0 0 21.762 23.447"
+      >
+        <g id="Group_21" data-name="Group 21" transform="translate(0)">
+          <path
+            id="Path_20"
+            data-name="Path 20"
+            d="M2660.313,313.618h0l-10.833,3.9,1.637,14.4,9.2,5.152,9.244-5.152,1.685-14.4Z"
+            transform="translate(-2649.48 -313.618)"
+            fill="#37474f"
+          />
+          <path
+            id="Path_21"
+            data-name="Path 21"
+            d="M2741.883,313.618v23.447l9.244-5.152,1.685-14.4Z"
+            transform="translate(-2731.05 -313.618)"
+            fill="#263238"
+          />
+          <path
+            id="Path_22"
+            data-name="Path 22"
+            d="M2692.293,379.169h11.724V368.618h-11.724Zm11.159-.6h-10.608v-9.345h10.621v9.345Z"
+            transform="translate(-2687.274 -362.17)"
+            fill="#fff"
+          />
+          <path
+            id="Path_23"
+            data-name="Path 23"
+            d="M2709.331,393.688l.4.416,2.265-2.28-2.294-2.294-.4.4,1.893,1.893Z"
+            transform="translate(-2702.289 -380.631)"
+            fill="#fff"
+          />
+          <rect
+            id="Rectangle_12"
+            data-name="Rectangle 12"
+            width="3.517"
+            height="0.469"
+            transform="translate(9.709 13.744)"
+            fill="#fff"
+          />
+        </g>
+      </svg>
+    </a>
+    <!-- <a
+      class="circle-link"
+      title="WoPeD Website"
+      href="https://woped.dhbw-karlsruhe.de/"
+      target="_blank"
+      rel="noopener"
+    >
+      <svg
+        alt="Angular CLI Logo"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        width="21.762"
+        height="23.447"
+        viewBox="0 0 21.762 23.447"
+      >
+        <g id="Group_21" data-name="Group 21" transform="translate(0)">
+          <path
+            id="Path_20"
+            data-name="Path 20"
+            d="M2660.313,313.618h0l-10.833,3.9,1.637,14.4,9.2,5.152,9.244-5.152,1.685-14.4Z"
+            transform="translate(-2649.48 -313.618)"
+            fill="#37474f"
+          />
+          <path
+            id="Path_21"
+            data-name="Path 21"
+            d="M2741.883,313.618v23.447l9.244-5.152,1.685-14.4Z"
+            transform="translate(-2731.05 -313.618)"
+            fill="#263238"
+          />
+          <path
+            id="Path_22"
+            data-name="Path 22"
+            d="M2692.293,379.169h11.724V368.618h-11.724Zm11.159-.6h-10.608v-9.345h10.621v9.345Z"
+            transform="translate(-2687.274 -362.17)"
+            fill="#fff"
+          />
+          <path
+            id="Path_23"
+            data-name="Path 23"
+            d="M2709.331,393.688l.4.416,2.265-2.28-2.294-2.294-.4.4,1.893,1.893Z"
+            transform="translate(-2702.289 -380.631)"
+            fill="#fff"
+          />
+          <rect
+            id="Rectangle_12"
+            data-name="Rectangle 12"
+            width="3.517"
+            height="0.469"
+            transform="translate(9.709 13.744)"
+            fill="#fff"
+          />
+        </g>
+      </svg>
+    </a> -->
 
-        <a class="circle-link" title="Augury" href="https://augury.rangle.io/" target="_blank" rel="noopener">
+   <a class="circle-link" title="Website" href="https://woped.dhbw-karlsruhe.de/" target="_blank" rel="noopener">
             <svg alt="Angular Augury Logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                 width="21.81" height="23.447" viewBox="0 0 21.81 23.447">
                 <defs>
@@ -421,7 +501,7 @@
             </svg>
         </a>
 
-        <a class="circle-link" title="Protractor" href="https://www.protractortest.org/" target="_blank" rel="noopener">
+        <!-- <a class="circle-link" title="Protractor" href="https://www.protractortest.org/" target="_blank" rel="noopener">
             <svg alt="Angular Protractor Logo" xmlns="http://www.w3.org/2000/svg" width="21.81" height="23.447"
                 viewBox="0 0 21.81 23.447">
                 <g id="Group_26" data-name="Group 26" transform="translate(0)">
@@ -435,9 +515,9 @@
                         transform="translate(-4634.008 -355.852)" fill="#fff" />
                 </g>
             </svg>
-        </a>
+        </a>  -->
 
-        <a class="circle-link" title="Find a Local Meetup" href="https://www.meetup.com/find/?keywords=angular"
+    <!-- <a class="circle-link" title="Find a Local Meetup" href="https://www.meetup.com/find/?keywords=angular"
             target="_blank" rel="noopener">
             <svg alt="Meetup Logo" xmlns="http://www.w3.org/2000/svg" width="24.607" height="23.447"
                 viewBox="0 0 24.607 23.447">
@@ -468,38 +548,63 @@
                     </g>
                 </g>
             </svg>
-        </a>
-    </div>
-    <!-- <mat-slide-toggle>Dark Mode</mat-slide-toggle> -->
-    <!-- Footer -->
-    <footer>
-        Love WoPeD?&nbsp;
-        <a href="https://woped.dhbw-karlsruhe.de" target="_blank" rel="noopener"> Give our repo a star.
-            <div class="github-star-badge">
-                <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                    viewBox="0 0 24 24">
-                    <path d="M0 0h24v24H0z" fill="none" />
-                    <path
-                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                </svg>
-                Star
-            </div>
-        </a>
-        <a href="https://github.com/angular/angular" target="_blank" rel="noopener">
-            <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="#1976d2" />
-                <path d="M0 0h24v24H0z" fill="none" />
-            </svg>
-        </a>
-    </footer>
+        </a> -->
+  </div>
+  <!-- <mat-slide-toggle>Dark Mode</mat-slide-toggle> -->
+  <!-- Footer -->
+  <footer>
+    Love WoPeD?&nbsp;
+    <a href="https://woped.dhbw-karlsruhe.de" target="_blank" rel="noopener">
+      Give our repo a star.
+      <div class="github-star-badge">
+        <svg
+          class="material-icons"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <path d="M0 0h24v24H0z" fill="none" />
+          <path
+            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+          />
+        </svg>
+        Star
+      </div>
+    </a>
+    <a href="https://github.com/angular/angular" target="_blank" rel="noopener">
+      <svg
+        class="material-icons"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          fill="#1976d2"
+        />
+        <path d="M0 0h24v24H0z" fill="none" />
+      </svg>
+    </a>
+  </footer>
 
-    <svg id="clouds" alt="Gray Clouds Background" xmlns="http://www.w3.org/2000/svg" width="2611.084" height="485.677"
-        viewBox="0 0 2611.084 485.677">
-        <path id="Path_39" data-name="Path 39"
-            d="M2379.709,863.793c10-93-77-171-168-149-52-114-225-105-264,15-75,3-140,59-152,133-30,2.83-66.725,9.829-93.5,26.25-26.771-16.421-63.5-23.42-93.5-26.25-12-74-77-130-152-133-39-120-212-129-264-15-54.084-13.075-106.753,9.173-138.488,48.9-31.734-39.726-84.4-61.974-138.487-48.9-52-114-225-105-264,15a162.027,162.027,0,0,0-103.147,43.044c-30.633-45.365-87.1-72.091-145.206-58.044-52-114-225-105-264,15-75,3-140,59-152,133-53,5-127,23-130,83-2,42,35,72,70,86,49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33,61.112,8.015,113.854-5.72,150.492-29.764a165.62,165.62,0,0,0,110.861-3.236c47,94,178,113,251,33,31.385,4.116,60.563,2.495,86.487-3.311,25.924,5.806,55.1,7.427,86.488,3.311,73,80,204,61,251-33a165.625,165.625,0,0,0,120,0c51,13,108,15,157-5a147.188,147.188,0,0,0,33.5-18.694,147.217,147.217,0,0,0,33.5,18.694c49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33C2446.709,1093.793,2554.709,922.793,2379.709,863.793Z"
-            transform="translate(142.69 -634.312)" fill="#eee" />
-    </svg>
-
+  <svg
+    id="clouds"
+    alt="Gray Clouds Background"
+    xmlns="http://www.w3.org/2000/svg"
+    width="2611.084"
+    height="485.677"
+    viewBox="0 0 2611.084 485.677"
+  >
+    <path
+      id="Path_39"
+      data-name="Path 39"
+      d="M2379.709,863.793c10-93-77-171-168-149-52-114-225-105-264,15-75,3-140,59-152,133-30,2.83-66.725,9.829-93.5,26.25-26.771-16.421-63.5-23.42-93.5-26.25-12-74-77-130-152-133-39-120-212-129-264-15-54.084-13.075-106.753,9.173-138.488,48.9-31.734-39.726-84.4-61.974-138.487-48.9-52-114-225-105-264,15a162.027,162.027,0,0,0-103.147,43.044c-30.633-45.365-87.1-72.091-145.206-58.044-52-114-225-105-264,15-75,3-140,59-152,133-53,5-127,23-130,83-2,42,35,72,70,86,49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33,61.112,8.015,113.854-5.72,150.492-29.764a165.62,165.62,0,0,0,110.861-3.236c47,94,178,113,251,33,31.385,4.116,60.563,2.495,86.487-3.311,25.924,5.806,55.1,7.427,86.488,3.311,73,80,204,61,251-33a165.625,165.625,0,0,0,120,0c51,13,108,15,157-5a147.188,147.188,0,0,0,33.5-18.694,147.217,147.217,0,0,0,33.5,18.694c49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33C2446.709,1093.793,2554.709,922.793,2379.709,863.793Z"
+      transform="translate(142.69 -634.312)"
+      fill="#eee"
+    />
+  </svg>
 </div>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->

@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-</head>
-
-<body>
     <div>
-        <mat-stepper orientation="vertical" #stepper>
+        <mat-stepper orientation="vertical" #stepperRef>
             <mat-step>
                 <form>
-                    <ng-template matStepLabel>Explenation</ng-template>
+                    <ng-template matStepLabel>Explanation</ng-template>
                     <p> <b>What is P2T?</b> <br>
                         The process-to-text approach in the context of Business Process Management
                         (BPM) and Natural Language Processing (NLP) refers to the automatic generation of text
@@ -21,42 +16,46 @@
                         of processes that can be used for various purposes, such as training documentation, user
                         documentation, or compliance reports.</p>
                 </form>
+                <button mat-button matStepperNext class="card">Next</button>
             </mat-step>
-
 
             <mat-step>
                 <form>
                     <ng-template matStepLabel>Model</ng-template>
-                    <p>To upload your process model you can either select your file via the Select button in your
-                        explorer
-                        or drag and drop it into the right pane.<br></p>
+                    <p>To upload your process model you can either select your file via a click in the Area in your
+                        explorer or drag and drop it into the right pane.<br></p>
                     <form method="POST Process Modell" enctype="multipart/form-data">
                         <div class="mehrspaltig">
-                            <div class="Upload from explorer" style="margin-top: 2em">
-                                <p>
-                                    <input name="datei" type="file" size="50" accept="text/*">
-                                    <br>(*.txt, *.html)
-                                </p>
+                                <div class="dropzone" #dropzoneRef (drop)="onDrop($event)" (dragover)="onDragOver($event)" (click)="selectFiles()">
+                                    <input type="file" style="display: none" #fileInputRef accept=".pnml, .bpmn" (change)="onFileSelected($event)">
+                                    <span *ngIf="isFileDropped">Uploaded file: {{ droppedFileName }}</span>
+                                <span *ngIf="!isFileDropped">Upload files via drag and drop or click into the textfield</span>
                             </div>
-                            <div class="dropzone">Leider habe ich noch keine Ahnung wie das mit dem Drag&Drop geht...
-                            </div>
+                            
                         </div>
                     </form>
+                    <button button mat-button matStepperNext class="card" (click)="generateText()">Generate</button>   
                 </form>
-                <button mat-button matStepperNext>Generate</button>
             </mat-step>
 
             <mat-step>
                 <ng-template matStepLabel>Text (Done)</ng-template>
+                 <div id="loading">
+                    <mat-spinner [diameter]="100" *ngIf="spinnerService.visibility | async">
+                    </mat-spinner> 
+                      </div>
                 <div>
-                    <p>Hier steht dann unsere Ausgabe</p>
-                    <button mat-button matStepperPrevious>Back</button>
-                    <button mat-button (click)="stepper.reset()">Reset</button>
-                    <button mat-button>Download Text as .txt</button>
+                    <p>Your input: <br></p>
+                    <div class="test1" id="model-container"></div>
+                    <p>Your Text: <br></p>
+                    <div id="result"></div>
+                    <button mat-button matStepperPrevious class="card">Back</button>
+                    <button mat-button matStepperNext class="card" (click)="downloadText()">Download Text as .txt</button>
                 </div>
             </mat-step>
         </mat-stepper>
+        <div id="error-box">
+            <p id="error-content"></p>
+        </div>
     </div>
-</body>
-
 </html>

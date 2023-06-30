@@ -1,4 +1,71 @@
 .mehrspaltig {
-    column-width: 16em;
-    max-width: 40em; 
-  }
+  display: flex;
+}
+
+.Upload.from.explorer {
+  margin-top: 2em;
+}
+
+.dropzone {
+  border: 1px dashed black;
+  height: 200px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 2em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dropzone span {
+  margin: auto 0;
+}
+.generateButton {
+  margin-top: 2em;
+}
+
+#error-box {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+
+}
+
+#error-content {
+  color: white;
+  padding: 20px;
+  border-color: #da0000;
+  border-style: solid;
+  background-color: #f7614e;
+  border-radius: 10px;
+  display: none;
+}
+.card {
+  border-radius: 4px;
+  border: 1px solid #eee;
+  background-color: #fafafa;
+  height: 40px;
+  width: 200px;
+  margin: 0 8px 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  line-height: 24px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 8px 0;
+}
